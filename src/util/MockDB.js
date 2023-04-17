@@ -1,41 +1,29 @@
 const db = {
     users: [
-        {
-            id: 1,
-            firstName: "John",
-            lastName: "Doe",
-            username: "johndoe",
-            password: "password123",
-            email: "johndoe@example.com",
-        },
-        {
-            id: 2,
-            firstName: "Jane",
-            lastName: "Doe",
-            username: "janedoe",
-            password: "password456",
-            email: "janedoe@example.com",
-        },
+        { id: 0, firstName: "John", lastName: "Doe", username: "jdoe", password: "password", email: "jdoe@example.com", threads: [0] },
+        { id: 1, firstName: "Jane", lastName: "Doe", username: "jane", password: "password", email: "jane@example.com", threads: [0] },
+        { id: 2, firstName: "Bob", lastName: "Smith", username: "bsmith", password: "password", email: "bsmith@example.com", threads: [1, 2] },
+        { id: 3, firstName: "Alice", lastName: "Johnson", username: "ajohnson", password: "password", email: "ajohnson@example.com", threads: [2] },
+        { id: 4, firstName: "Mike", lastName: "Brown", username: "mbrown", password: "password", email: "mbrown@example.com", threads: [3] },
     ],
     messages: [
-        {
-            id: 1,
-            user: 1,
-            message: "Hello, world!",
-            thread: 1,
-        },
-        {
-            id: 2,
-            user: 2,
-            message: "How are you?",
-            thread: 1,
-        },
+        { id: 0, user: 0, message: "This is the first message" },
+        { id: 1, user: 1, message: "This is a reply to the first message" },
+        { id: 2, user: 0, message: "This is another message" },
+        { id: 3, user: 2, message: "Thread 2: This is the first message" },
+        { id: 4, user: 0, message: "Thread 2: This is a reply to the first message" },
+        { id: 5, user: 2, message: "Thread 2: This is another reply to the first message" },
+        { id: 6, user: 1, message: "Thread 3: This is the first message" },
+        { id: 7, user: 2, message: "Thread 3: This is a reply to the first message" },
+        { id: 8, user: 3, message: "Thread 3: This is another reply to the first message" },
+        { id: 9, user: 2, message: "Thread 4: This is the first message" },
+        { id: 10, user: 4, message: "Thread 4: This is a reply to the first message" },
     ],
     threads: [
-        {
-            id: 1,
-            messageList: [1, 2],
-        },
+        { id: 0, messageList: [0, 1] },
+        { id: 1, messageList: [3, 4, 5] },
+        { id: 2, messageList: [6, 7, 8] },
+        { id: 3, messageList: [9, 10] },
     ],
 };
 
