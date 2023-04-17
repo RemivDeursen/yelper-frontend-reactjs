@@ -1,0 +1,20 @@
+#sidebar-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width: 100%;
+    border-right: 2px solid rgb(92, 110, 126);
+    height: 100vh;
+}
+Button {
+    width: 100%;
+    text-align: start !important;
+    background-color: rgb(21, 32, 43) !important;
+    border-color: rgb(21, 32, 43) !important;
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+}
+Button:hover {
+    background-color: rgb(92, 110, 126) !important;
+    border-color: rgb(21, 32, 43) !important;
+}
