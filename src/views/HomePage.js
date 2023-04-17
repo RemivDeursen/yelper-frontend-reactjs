@@ -1,5 +1,5 @@
 // src/components/HomePage.js
-import React, { useState, useEffect } from "react";
+import React, {useState, useEffect} from "react";
 import db from "../util/MockDB";
 import axios from "axios";
 import Thread from "../components/Thread";
@@ -21,7 +21,8 @@ function HomePage() {
 
     return (
         <>
-            <Thread />
+            <h1>Homepage</h1>
+            <Thread/>
         </>
     );
 }

@@ -3,6 +3,7 @@ import db from "../util/MockDB";
 import Card from "react-bootstrap/Card";
 // I want to import the Thread css file here
 import "../styles/Thread.css";
+import { HandThumbsUpFill, ShareFill } from 'react-bootstrap-icons';
 // to add a prop to the component, do this:
 // function Messages(userId)
 // then to call it from the parent component, do this:
@@ -19,7 +20,7 @@ function Thread() {
                 console.log("ThreadID: ", threadId, "ThreadIndex: ", threadIndex);
                 console.log("Thread: ", thread);
                 // I want to map the messageList of thread to the messages in db.messages
-                return (<div key={threadIndex}>
+                return (<div className={"thread-container"} key={threadIndex}>
                     {thread.messageList.map((messageId, index) => {
                         // Grab the individual message from the db that matches the messageId
                         // and the user from the db that matches the user of the message
@@ -37,7 +38,7 @@ function Thread() {
                                 <Card.Body>
                                     <Card.Title>{user.firstName} {user.lastName}</Card.Title>
                                     <Card.Text>{post.message}</Card.Text>
-                                    <Card.Subtitle>Thread: {thread.id}</Card.Subtitle>
+                                    <Card.Subtitle><HandThumbsUpFill/> {post.likes}  - <ShareFill/> Shared: {post.shares}</Card.Subtitle>
                                 </Card.Body>
                             </Card>
                         );
