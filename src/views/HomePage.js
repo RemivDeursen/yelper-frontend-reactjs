@@ -1,13 +1,13 @@
 // src/components/HomePage.js
 import React, { useState, useEffect } from "react";
-import db from "../util/MockDB";
+import db from "../../util/MockDB";
 import axios from "axios";
-import Messages from "./Thread";
-import Sidebar from "./Sidebar";
-import Header from "./Header";
+import Messages from "../Thread";
+import Sidebar from "../Sidebar";
+import Header from "../Header";
 import { Container, Row, Col, Card, Form, Button } from "react-bootstrap";
 // Styling
-import '../styles/HomePage.css';
+import '../../styles/HomePage.css';
 
 function HomePage() {
     const [data, setData] = useState(null);
